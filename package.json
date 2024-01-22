@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@ionic-native/file": "^5.36.0",
+    "@ionic-native/file-opener": "^5.36.0"
+  }
+}

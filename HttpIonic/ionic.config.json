@@ -1,0 +1,7 @@
+{
+  "name": "HttpIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

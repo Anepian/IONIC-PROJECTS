@@ -1,0 +1,7 @@
+{
+  "name": "reto4",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

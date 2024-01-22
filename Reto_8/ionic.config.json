@@ -1,0 +1,7 @@
+{
+  "name": "Reto_8",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

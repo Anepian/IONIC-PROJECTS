@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-toolbar>
+
+    <ion-title>Agregar nombre</ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+
+    <ion-input [(ngModel)]="nombre" placeholder="Nombre"></ion-input>
+
+  </ion-item>
+
+  <ion-button (click)="agregarNombre()">Agregar</ion-button>
+
+  <ion-select [(ngModel)]="seleccionados" multiple="true">
+
+    <ion-select-option *ngFor="let nombre of nombres" [value]="nombre">{{nombre}}</ion-select-option>
+
+  </ion-select>
+
+  <ion-item *ngFor="let nombre of nombres">
+
+    {{ nombre }}
+
+    <ion-button (click)="eliminarNombre(nombre)">Eliminar</ion-button>
+
+  </ion-item>
+
+  <ion-button (click)="guardarLista()">Guardar Lista</ion-button>
+
+  <ion-card *ngIf="seleccionado">
+
+    <ion-card-header>
+
+      <ion-card-title>{{seleccionado}}</ion-card-title>
+
+    </ion-card-header>
+
+  </ion-card>
+
+</ion-content>

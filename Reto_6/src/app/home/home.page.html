@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Listado
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list>
+      <ion-list-header color="tertiary">
+        <ion-label>Personajes de Rick and Morty</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let character of characters">
+        <ion-thumbnail slot="start">
+          <img *ngIf="character.image" [src]="character.image" />
+        </ion-thumbnail>
+        <ion-label>
+          <h3>{{ character.name }}</h3>
+          <p>{{ character.origin.name }}</p>
+          <p>{{ character.location.name }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

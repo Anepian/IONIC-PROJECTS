@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>
+      Mi tiendita
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-button expand="block" color="primary" (click)="agregarProducto()">Agregar Producto</ion-button>
+
+    <ion-list>
+      <ion-item *ngFor="let producto of productos">
+        <ion-thumbnail slot="start">
+          <img [src]="producto.imageUrl" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{producto.nombre}}</h2>
+          <p>{{producto.descripcion}}</p>
+          <p>Cantidad: {{producto.cantidad}}</p>
+          <p>Precio: {{producto.precio}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

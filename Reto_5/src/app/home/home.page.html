@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      Lista de Productos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" padding="true">
+  <ion-item>
+    <ion-label position="stacked">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Descripción</ion-label>
+    <ion-input [(ngModel)]="descripcion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Cantidad</ion-label>
+    <ion-input type="number" [(ngModel)]="cantidad"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Precio de Costo</ion-label>
+    <ion-input type="number" [(ngModel)]="precioCosto"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Precio de Venta</ion-label>
+    <ion-input type="number" [(ngModel)]="precioVenta"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">URL de Fotografía</ion-label>
+    <ion-input [(ngModel)]="urlFoto"></ion-input>
+  </ion-item>
+  <ion-button expand="block" color="primary" (click)="agregarProducto()">Agregar Producto</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let producto of productos">
+      <ion-thumbnail slot="start">
+        <img *ngIf="producto.urlFoto" [src]="producto.urlFoto" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ producto.nombre }}</h2>
+        <p>{{ producto.descripcion }}</p>
+        <p>Cantidad: {{ producto.cantidad }}</p>
+        <p>Precio de Costo: {{ producto.precioCosto }}</p>
+        <p>Precio de Venta: {{ producto.precioVenta }}</p>
+        <p *ngIf="producto.urlFoto">URL de Fotografía: {{ producto.urlFoto }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

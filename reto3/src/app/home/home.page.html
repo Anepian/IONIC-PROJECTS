@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Seleccionar Opción
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-radio-group [(ngModel)]="option">
+      <ion-item>
+        <ion-label>Opción 1</ion-label>
+        <ion-radio value="Opción 1" checked></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Opción 2</ion-label>
+        <ion-radio value="Opción 2"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Opción 3</ion-label>
+        <ion-radio value="Opción 3"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button (click)="onSubmit()" [disabled]="!option">Enviar</ion-button>
+
+  <ion-alert *ngIf="showAlert" header="Opción seleccionada" subHeader="" message="{{ selectedOption }}">
+    <ion-button (click)="dismissAlert()">Cerrar</ion-button>
+  </ion-alert>
+</ion-content>

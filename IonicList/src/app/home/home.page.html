@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      Lista simple
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" padding="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Lista simple</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="stacked" >Nombre</ion-label>
+    <ion-input [(ngModel)]="valor"></ion-input>
+  </ion-item>
+  <ion-button expand="block" color="primary" (click)="Agregar()">Agregar</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let nombre of nombres">
+      <ion-label>{{ nombre }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

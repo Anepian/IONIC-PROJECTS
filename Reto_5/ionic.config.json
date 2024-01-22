@@ -1,0 +1,7 @@
+{
+  "name": "Reto5",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
